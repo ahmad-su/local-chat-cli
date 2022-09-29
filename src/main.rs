@@ -34,7 +34,7 @@ async fn main() -> Result<(), Box<dyn Error>>{
     //now it's ready to send and receive ping
     swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse()?)?;
     
-    //let's try using giving it an address to ping on cli.
+    //let's try giving it an address to ping on cli.
     //format : cargo run [MultiAddr]
     //example: cargo run /ip4/127.0.0.1/tcp/12321
     if let Some(addr) = std::env::args().nth(1) {
